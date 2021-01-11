@@ -1,0 +1,61 @@
+#body {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(57, 2, 187);
+}
+
+#h3 {
+  margin-top: 200px;
+  color: blue;
+}
+
+#h4 {
+  margin-top: 200px;
+  color: rgb(15, 64, 121);
+}
+
+#btn1 {
+  color: #008cba;
+  background-color: #ffffff;
+  width: 120px;
+}
+#btn2 {
+  color: #ffffff;
+  background-color: #008cba;
+  width: 120px;
+}
+
+#btn3 {
+  color: #f44336;
+  border-radius: 8px;
+  width: 110px;
+}
+
+#generatedPin {
+  padding-left: 5px;
+  width: 300px;
+  color: rgb(3, 34, 25);
+  border: 2px solid #4040a1;
+}
+
+#active_class {
+  background-color: rgb(15, 64, 121);
+  color: silver;
+}
+.colA {
+  padding-left: 16rem;
+  margin-top: 6px;
+}
+
+.colB {
+  width: 15%;
+  margin-top: 6px;
+}
+.row {
+  padding-left: 8rem;
+  content: "";
+  clear: both;
+}
