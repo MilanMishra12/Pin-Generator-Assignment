@@ -14,13 +14,15 @@ const Pin: React.FC<PinInterface> = ({ pin }) => {
       <td>
         <input type="text" defaultValue="Name"></input>
       </td>
-      <td>{generatePin}</td>
+      <td>
+        <input className="savedPin" value={generatePin} readOnly></input>
+      </td>
       <td>
         <button
           onClick={() => dispatch(deletePin(id))}
-          style={{ color: "red" }}
+          className="delete_button"
         >
-          <strong>Delete</strong>
+          DELETE
         </button>
       </td>
     </tr>

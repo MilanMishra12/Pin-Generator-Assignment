@@ -63,3 +63,13 @@ h2 {
 .navbar-brand1:hover {
   text-decoration: underline;
 }
+
+.delete_button {
+  background-color: red;
+  color: white;
+  width: 90px;
+}
+
+.savedPin {
+  width: 298px;
+}
