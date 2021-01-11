@@ -11,7 +11,7 @@ const useSelector = createSelectorHook<IRootState>();
 
 const Pins = () => {
   const pins = useSelector((state) => state.pin.pins);
-  if (pins.length == 0) {
+  if (pins.length === 0) {
     return (
       <h2 id="body" style={{ paddingTop: "12rem" }}>
         No Pins generated..

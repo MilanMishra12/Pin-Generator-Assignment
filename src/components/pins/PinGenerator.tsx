@@ -1,22 +1,9 @@
 export class PinGenerator {
-  characters: string;
-  length: any;
-  constructor() {
-    this.characters = "";
-    this.length = "";
-  }
-  setLength(length: any) {
-    this.length = length;
-    return this;
-  }
-  setNumberCase(isNumeric: any) {
-    if (isNumeric) {
-      this.characters += "123456789";
-    }
-    return this;
-  }
+  length: number = 4;
+
   generate(): string {
-    let characterList = this.characters;
+    let characterList = "123456789";
+
     var PinGenerate1: string = "";
     var PinGenerate2: string = "";
     var PinGenerate3: string = "";

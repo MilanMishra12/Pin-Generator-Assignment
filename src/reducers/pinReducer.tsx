@@ -1,4 +1,4 @@
-import { ADD_PIN, DELETE_PIN, GET_PIN, UPDATE_ID } from "../constants/types";
+import { ADD_PIN, DELETE_PIN } from "../constants/types";
 
 interface initialState {
   pins: Array<IPin>;
@@ -21,30 +21,10 @@ export const pinReducer = (state: initialState = defaultState, action: any) => {
         pins: [action.payload, ...state.pins],
       };
 
-    case GET_PIN:
-      let arr: any = state.pins.filter((pin) => pin.id == action.payload);
-      arr = arr.values(); //it will return object
-      for (let val of arr) {
-        // every value will come into this
-        arr = val; //storing it into arr
-      }
-      return {
-        ...state,
-        pin: arr, //we will save all in pin
-      };
-
-    case UPDATE_ID:
-      return {
-        ...state,
-        pins: state.pins.map((pin) =>
-          pin.id == action.payload.id ? action.payload : pin
-        ),
-      };
-
     case DELETE_PIN:
       return {
         ...state,
-        pins: state.pins.filter((pin) => pin.id != action.payload),
+        pins: state.pins.filter((pin) => pin.id !== action.payload),
       };
 
     default:

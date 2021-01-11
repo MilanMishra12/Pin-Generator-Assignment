@@ -10,22 +10,13 @@ const AddPin = () => {
   let history = useHistory();
   const dispatch = useDispatch();
 
-  const [pin, setPin] = useState({
-    length: 4,
-    numeric: true,
-  });
+  const [pin, setPin] = useState({});
 
   const [generatePin, setGeneratPin] = useState("");
-  const { length, numeric } = pin;
 
   const generatepin = () => {
-    let generatPin = new PinGenerator()
-      .setLength(length)
-      .setNumberCase(numeric)
-      .generate();
-    {
-      setGeneratPin(generatPin);
-    }
+    let generatPin = new PinGenerator().generate();
+    setGeneratPin(generatPin);
   };
 
   const createPin = (event: any) => {

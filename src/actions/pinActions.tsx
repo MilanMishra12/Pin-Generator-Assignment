@@ -1,4 +1,4 @@
-import { ADD_PIN, DELETE_PIN, GET_PIN, UPDATE_ID } from "../constants/types";
+import { ADD_PIN, DELETE_PIN } from "../constants/types";
 
 export const addPin = (pin: any) => {
   return {
@@ -6,19 +6,6 @@ export const addPin = (pin: any) => {
     payload: pin,
   };
 };
-
-//get pin
-
-export const getPin = (id: number) => ({
-  type: GET_PIN,
-  payload: id,
-});
-
-//UPDATE ID
-export const updateId = (pin: any) => ({
-  type: UPDATE_ID,
-  payload: pin,
-});
 
 //DELETE PIN
 export const deletePin = (id: number) => ({

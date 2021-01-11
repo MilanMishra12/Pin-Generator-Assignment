@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deletePin } from "../../actions/pinActions";
 
@@ -12,20 +11,17 @@ const Pin: React.FC<PinInterface> = ({ pin }) => {
   const { generatePin, id } = pin;
   return (
     <tr>
-      <td>{id}</td>
+      <td>
+        <input type="text" defaultValue="Name"></input>
+      </td>
       <td>{generatePin}</td>
       <td>
-        <Link to={`/edit/${id}`}>
-          <strong>Edit</strong>
-        </Link>
-        &nbsp;&nbsp;&nbsp;
-        <Link
-          to="#"
+        <button
           onClick={() => dispatch(deletePin(id))}
           style={{ color: "red" }}
         >
           <strong>Delete</strong>
-        </Link>
+        </button>
       </td>
     </tr>
   );

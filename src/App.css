@@ -59,3 +59,7 @@ h2 {
   content: "";
   clear: both;
 }
+
+.navbar-brand1:hover {
+  text-decoration: underline;
+}
