@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PinGenerator } from "./PinGenerator";
+import PinGenerator from "./PinGenerator";
 import { useDispatch } from "react-redux";
 import { addPin } from "../../actions/pinActions";
 import { generate } from "shortid";
@@ -15,8 +15,7 @@ const AddPin = () => {
   const [generatePin, setGeneratPin] = useState("");
 
   const generatepin = () => {
-    let generatPin = new PinGenerator().generate();
-    setGeneratPin(generatPin);
+    setGeneratPin(PinGenerator);
   };
 
   const createPin = (event: any) => {

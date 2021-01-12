@@ -5,7 +5,7 @@ import store from "./store";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AddPin from "./components/pins/AddPin";
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -23,6 +23,6 @@ function App() {
       </BrowserRouter>
     </Provider>
   );
-}
+};
 
 export default App;
