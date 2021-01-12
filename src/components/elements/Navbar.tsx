@@ -8,15 +8,11 @@ const Navbar = () => {
     <nav className="navbar shadow bg-white fixed-top">
       <div className="container">
         <div>
-          <Link to="/" className="navbar-brand1 " style={{ color: "#008cba" }}>
+          <Link to="/" className="navbar-brand1">
             <strong>Generate Pin</strong>
           </Link>
-          &nbsp; &nbsp; &nbsp;
-          <Link
-            to="/savedpins"
-            className="navbar-brand1"
-            style={{ color: "#008cba" }}
-          >
+
+          <Link to="/savedpins" className="navbar-brand1">
             <strong>Saved Pins</strong>
           </Link>
         </div>
