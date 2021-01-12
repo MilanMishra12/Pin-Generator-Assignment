@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "../../App.css";
 import { PinGenerator } from "./PinGenerator";
 import { useDispatch } from "react-redux";
 import { addPin } from "../../actions/pinActions";
 import { generate } from "shortid";
 import { useHistory } from "react-router-dom";
+import { GENERATE_BUTTON, SAVE_BUTTON } from "../../stylesheet";
 
 const AddPin = () => {
   let history = useHistory();
@@ -45,8 +45,6 @@ const AddPin = () => {
               Click on the button to generate random 4 digit 5 numbers
             </strong>
           </p>
-          <br />
-          <br />
           <div>
             <strong>
               <input
@@ -58,28 +56,21 @@ const AddPin = () => {
                 onChange={(event) => onInputChange(event)}
               />
             </strong>
-            &nbsp;
           </div>
-          <br />
-          <br />
-          <br />
           <div>
             <div className="colAA">
-              <button
-                id="btn1"
+              <GENERATE_BUTTON
                 onClick={() => {
                   generatepin();
                 }}
               >
                 <strong>GENERATE</strong>
-              </button>
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              <button id="btn2" onClick={(e) => createPin(e)}>
+              </GENERATE_BUTTON>
+
+              <SAVE_BUTTON onClick={(e) => createPin(e)}>
                 <strong>SAVE</strong>
-              </button>
+              </SAVE_BUTTON>
             </div>
-            <br />
-            <br />
           </div>
         </section>
       </div>
