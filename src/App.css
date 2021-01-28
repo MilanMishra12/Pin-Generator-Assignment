@@ -47,7 +47,11 @@ h2 {
   color: #008cba;
 }
 .navbar-brand1:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: rgb(75, 78, 236);
+}
+.navbar-brand1:active {
+  color: #f44336;
 }
 
 .delete_button {

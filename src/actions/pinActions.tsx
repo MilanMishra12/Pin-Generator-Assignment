@@ -13,15 +13,14 @@ export const deletePin = (id: number) => ({
   payload: id,
 });
 
-//get pin`
-
+//get pin
 export const getName = (name: string) => ({
   type: GET_NAME,
   payload: name,
 });
 
 //UPDATE ID
-export const updateName = (name: string) => ({
+export const updateName = (id: number) => ({
   type: UPDATE_NAME,
-  payload: name,
+  payload: id,
 });
