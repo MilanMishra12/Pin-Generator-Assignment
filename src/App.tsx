@@ -12,7 +12,7 @@ const App = () => {
         <div id="body">
           <Navbar />
           <div className="container">
-            <div className="py-3">
+            <div className="py-5">
               <Switch>
                 <Route exact path="/savedpins" component={Pins} />
                 <Route exact path="/" component={AddPin} />
