@@ -22,6 +22,7 @@ const PinGenerator = () => {
     PinGenerate5 =
       PinGenerate5 + characterList[getRandomInt(0, characterList.length - 1)];
   }
+  //strong all 5 different pins into one.
   PinGenerate =
     " " +
     PinGenerate1 +

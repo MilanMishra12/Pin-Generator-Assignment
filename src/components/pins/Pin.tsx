@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import shortid from "shortid";
 import { deletePin } from "../../actions/pinActions";
 import { getName, updateName } from "../../actions/pinActions";
 
@@ -13,7 +14,7 @@ const Pin: React.FC<PinInterface> = ({ pin }) => {
   const { generatePin, id } = pin;
 
   //to change the name in input field..
-  const [name, setName] = useState("Name");
+  const [name, setName] = useState(shortid.generate()); //using shortId to give a random string id or name to every pin.
 
   useEffect(() => {
     if (pin !== null) {
@@ -24,7 +25,7 @@ const Pin: React.FC<PinInterface> = ({ pin }) => {
 
   const onUpdateId = (event: any) => {
     event.preventDefault();
-    const update_name = Object.assign(pin, { name: name });
+    const update_name = Object.assign(pin, { name: name }); //we can update name from input field directly.. also add space after editing new name.
     dispatch(updateName(update_name));
   };
 
