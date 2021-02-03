@@ -9,9 +9,7 @@ import { GENERATE_BUTTON, SAVE_BUTTON } from "../../stylesheet";
 const AddPin = () => {
   let history = useHistory();
   const dispatch = useDispatch();
-
   const [pin, setPin] = useState({});
-
   const [generatePin, setGeneratPin] = useState("");
 
   const generatepin = () => {
@@ -66,7 +64,10 @@ const AddPin = () => {
                 <strong>GENERATE</strong>
               </GENERATE_BUTTON>
 
-              <SAVE_BUTTON onClick={(e) => createPin(e)}>
+              <SAVE_BUTTON
+                onClick={(e) => createPin(e)}
+                disabled={!generatePin}
+              >
                 <strong>SAVE</strong>
               </SAVE_BUTTON>
             </div>
